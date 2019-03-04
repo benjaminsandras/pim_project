@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/add_attribute', function() {
+    return view('add_attribute');
+});
