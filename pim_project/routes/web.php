@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/add_attribute', function() {
-    return view('add_attribute');
-});
+Route::get('/add_attribute', 'AttributeController@get_attribute_form');
+Route::post('/add_attribute', 'AttributeController@post_attribute_form');
+
+    
+
