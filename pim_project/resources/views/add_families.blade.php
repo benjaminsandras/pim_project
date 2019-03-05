@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <form class="forms" action="/add_family" method="post">
+                <form class="forms" action="/add_families" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="family_name">Nom</label>

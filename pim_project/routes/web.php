@@ -21,6 +21,6 @@ Route::post('/add_attribute', 'AttributeController@post_attribute_form');
 Route::get('/add_attribute_group', 'AttributeGroupController@get_attribute_group_form');
 Route::post('/add_attribute_group', 'AttributeGroupController@post_attribute_group_form');
 
-Route::get('/add_family', 'FamiliesController@get_family_form');
-Route::post('/add_family', 'FamiliesController@post_family_form');
+Route::get('/add_families', 'FamiliesController@get_family_form');
+Route::post('/add_families', 'FamiliesController@post_family_form');
 
