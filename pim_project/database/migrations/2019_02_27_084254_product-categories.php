@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AttributeFamily extends Migration
+class ProductCategories extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class AttributeFamily extends Migration
      */
     public function up()
     {
-        Schema::create('attibute-family', function (Blueprint $table) {
-            $table->integer('fk_attribute')->unsigned();
-            $table->integer('fk_family')->unsigned();
+        Schema::create('product-categories', function (Blueprint $table) {
+            $table->integer('fk_product')->unsigned();
+            $table->integer('fk_category')->unsigned();
  
-            $table->foreign('fk_attribute')->references('id')->on('attribute')
+            $table->foreign('fk_product')->references('id')->on('products')
                 ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('fk_family')->references('id')->on('family')
+            $table->foreign('fk_category')->references('id')->on('categories')
                 ->onUpdate('cascade')->onDelete('cascade');
  
-            $table->primary(['fk_attribute', 'fk_family']);
+            $table->primary(['fk_product', 'fk_category']);
         });
     }
 
@@ -33,6 +33,6 @@ class AttributeFamily extends Migration
      */
     public function down()
     {
-        Schema::drop('attribute-family');
+        Schema::drop('product-categories');
     }
 }

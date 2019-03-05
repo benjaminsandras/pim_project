@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\attribute_group;
+use App\attribute_groups;
 
 class AttributeGroupController extends Controller
 {
@@ -18,9 +18,9 @@ class AttributeGroupController extends Controller
 	public function post_attribute_group_form(Request $request)
 	{
 
-        $attribute_group = new attribute;
-        $attribute->label = $request->input('label');  
-        $attribute->save();
+        $attribute_group = new attribute_groups;
+        $attribute_group->label = $request->input('label');  
+        $attribute_group->save();
         
         return redirect('add_attribute_group')->with(['success', 'attribut sauvegardé']);
 	}

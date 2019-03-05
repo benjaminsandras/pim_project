@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AttributeGroupFamily extends Migration
+class AttributeGroupFamilies extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class AttributeGroupFamily extends Migration
      */
     public function up()
     {
-        Schema::create('attibute_group-family', function (Blueprint $table) {
+        Schema::create('attibute_group_families', function (Blueprint $table) {
             $table->integer('fk_attribute_group')->unsigned();
             $table->integer('fk_family')->unsigned();
  
-            $table->foreign('fk_attribute_group')->references('id')->on('attribute_group')
+            $table->foreign('fk_attribute_group')->references('id')->on('attribute_groups')
                 ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('fk_family')->references('id')->on('family')
+            $table->foreign('fk_family')->references('id')->on('families')
                 ->onUpdate('cascade')->onDelete('cascade');
  
             $table->primary(['fk_attribute_group', 'fk_family']);
@@ -33,6 +33,6 @@ class AttributeGroupFamily extends Migration
      */
     public function down()
     {
-        Shema::drop('attibute_group-family');
+        Schema::drop('attibute_group_families');
     }
 }

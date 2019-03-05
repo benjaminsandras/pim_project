@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Attribute extends Migration
+class Categories extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class Attribute extends Migration
      */
     public function up()
     {
-        Schema::create('attribute', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
-            $table->string('type')->nullable();
-            $table->unsignedInteger('fk_attribute_group')->nullable();
+            $table->string('image')->nullable();
+            $table->unsignedInteger('fk_category')->nullable();
             $table->timestamps();
-            $table->foreign('fk_attribute_group')->references('id')->on('attribute_group')
+            $table->foreign('fk_category')->references('id')->on('categories')
             ->onUpdate('cascade')
             ->onDelete('cascade');
-        });
-
+        });    
     }
 
     /**
@@ -33,6 +32,6 @@ class Attribute extends Migration
      */
     public function down()
     {
-        Schema::drop('attribute');
+        Schema::drop('categories');
     }
 }

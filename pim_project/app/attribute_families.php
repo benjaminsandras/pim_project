@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class attribute-family extends Model
+class attribute_families extends Model
 {
     //
 }

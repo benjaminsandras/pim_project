@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\attribute;
-use App\attribute_group;
+use App\attributes;
+use App\attribute_groups;
 
 
 class AttributeController extends Controller
 {
     public function get_attribute_form()
     {
-        $attribute_group = attribute_group::all();
+        $attribute_group = attribute_groups::all();
         return view('add_attribute', [ "attribute_group" => $attribute_group ]);
 	}
 
@@ -26,7 +26,7 @@ class AttributeController extends Controller
         //     'Prenom'=>'required',
         // ]);
 
-        $attribute = new attribute;
+        $attribute = new attributes;
         $attribute->label = $request->input('label'); 
 		$attribute->type = $request->input('type'); 
         $attribute->fk_attribute_group = $request->input('fk_attribute_group'); 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AttributeGroup extends Migration
+class AttributeGroups extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AttributeGroup extends Migration
      */
     public function up()
     {
-        Schema::create('attribute_group', function (Blueprint $table) {
+        Schema::create('attribute_groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
             $table->timestamps();
@@ -27,6 +27,6 @@ class AttributeGroup extends Migration
      */
     public function down()
     {
-        Schema::drop('attribute_group');
+        Schema::drop('attribute_groups');
     }
 }

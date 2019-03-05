@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class variant_product extends Model
+class attribute_group_families extends Model
 {
     //
 }

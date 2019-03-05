@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Category extends Migration
+class VariantProducts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class Category extends Migration
      */
     public function up()
     {
-        Schema::create('category', function (Blueprint $table) {
+        Schema::create('variant_products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
             $table->string('image')->nullable();
-            $table->unsignedInteger('fk_category')->nullable();
+            $table->string('type')->nullable();
+            $table->unsignedInteger('fk_product')->nullable();
             $table->timestamps();
-            $table->foreign('fk_category')->references('id')->on('category')
+            $table->foreign('fk_product')->references('id')->on('products')
             ->onUpdate('cascade')
             ->onDelete('cascade');
         });    
@@ -32,6 +33,6 @@ class Category extends Migration
      */
     public function down()
     {
-        Schema::drop('category');
+        Schema::drop('variant_products');
     }
 }
