@@ -32,14 +32,16 @@ class FamiliesController extends Controller
         $family->label = $request->input('label'); 
         $family->image = $request->input('image');
         $family->save(); 
-        
-        $attribute_group = new attribute_group_families;
-        $attribute_group->fk_attribute_group = $request->input('fk_attribute_group'); 
-        $attribute_group->save();
 
-        $attribute = new attribute_families;
-        $attribute->fk_attribute = $request->input('fk_attribute');
-        $attribute->save(); 
+        $attribute_family = new attribute_families;
+        $attribute_family->fk_attribute = $request->input('fk_attribute');
+        $attribute_family->fk_family = $family->id;
+        $attribute_family->save();
+
+        $attribute_group_family = new attribute_group_families;
+        $attribute_group_family->fk_attribute_group = $request->input('fk_attribute_group');
+        $attribute_group_family->fk_family = $family->id;
+        $attribute_group_family->save();
         
         return redirect('add_families')->with(['success', 'attribut sauvegardé']);
 	}

@@ -13,7 +13,7 @@ class AttributeFamilies extends Migration
      */
     public function up()
     {
-        Schema::create('attibute_families', function (Blueprint $table) {
+        Schema::create('attribute_families', function (Blueprint $table) {
             $table->integer('fk_attribute')->unsigned();
             $table->integer('fk_family')->unsigned();
  
@@ -23,6 +23,7 @@ class AttributeFamilies extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
  
             $table->primary(['fk_attribute', 'fk_family']);
+            $table->timestamps();
         });
     }
 

@@ -13,7 +13,7 @@ class AttributeGroupFamilies extends Migration
      */
     public function up()
     {
-        Schema::create('attibute_group_families', function (Blueprint $table) {
+        Schema::create('attribute_group_families', function (Blueprint $table) {
             $table->integer('fk_attribute_group')->unsigned();
             $table->integer('fk_family')->unsigned();
  
@@ -23,6 +23,7 @@ class AttributeGroupFamilies extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
  
             $table->primary(['fk_attribute_group', 'fk_family']);
+            $table->timestamps();
         });
     }
 
@@ -33,6 +34,6 @@ class AttributeGroupFamilies extends Migration
      */
     public function down()
     {
-        Schema::drop('attibute_group_families');
+        Schema::drop('attribute_group_families');
     }
 }
