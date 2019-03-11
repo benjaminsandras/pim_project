@@ -19,12 +19,12 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
   <div class="sidebar-heading">Start Bootstrap </div>
   <div class="list-group list-group-flush">
-    <a href="/add_families" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
     <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+    <a href="/add_families" class="list-group-item list-group-item-action bg-light">Overview</a>
+    <a href="/add_attribute_group" class="list-group-item list-group-item-action bg-light">ajouter groupe d'attribut</a>
+    <a href="/add_attribute" class="list-group-item list-group-item-action bg-light">ajouter attribut</a>
+    <a href="/add_families" class="list-group-item list-group-item-action bg-light">ajouter famille</a>
   </div>
 </div>
 <!-- /#sidebar-wrapper -->
