@@ -15,7 +15,12 @@ class AttributeController extends Controller
     public function get_attribute_form()
     {
         $attribute_group = attribute_groups::all();
-        return view('add_attribute', [ "attribute_group" => $attribute_group ]);
+        $attribute = attributes::orderBy('label','desc')->get();
+        return view('add_attribute', 
+            [ 
+                "attribute_group" => $attribute_group, 
+                "attribute" => $attribute, 
+            ]);
 	}
 
 	public function post_attribute_form(Request $request)

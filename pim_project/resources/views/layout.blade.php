@@ -16,15 +16,15 @@
 <div class="d-flex" id="wrapper">
 
 <!-- Sidebar -->
-<div class="bg-light border-right" id="sidebar-wrapper">
-  <div class="sidebar-heading">Start Bootstrap </div>
+  <div class="bg-light border-right" id="sidebar-wrapper">
+  <div class="sidebar-heading">Super PIM </div>
   <div class="list-group list-group-flush">
-    <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-    <a href="/add_families" class="list-group-item list-group-item-action bg-light">Overview</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">Produits</a>
     <a href="/add_attribute_group" class="list-group-item list-group-item-action bg-light">ajouter groupe d'attribut</a>
     <a href="/add_attribute" class="list-group-item list-group-item-action bg-light">ajouter attribut</a>
     <a href="/add_families" class="list-group-item list-group-item-action bg-light">ajouter famille</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">#</a>
+    <a href="/add_families" class="list-group-item list-group-item-action bg-light">#</a>
   </div>
 </div>
 <!-- /#sidebar-wrapper -->
@@ -33,7 +33,7 @@
 <div id="page-content-wrapper">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+    <button class="btn btn-primary" id="menu-toggle">Menu</button>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

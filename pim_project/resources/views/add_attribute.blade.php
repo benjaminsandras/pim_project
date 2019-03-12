@@ -7,7 +7,7 @@
 @section('contenu')
 
     <div class="container">
-        <div class="row">
+        <div id="attribute_form" class="row">
             <div class="col">
                 <form class="forms" action="/add_attribute" method="post">
                     {{ csrf_field() }}
@@ -29,7 +29,7 @@
                         <label for="attribute_group">Groupe</label>
                             <select name="fk_attribute_group" class="form-control" id="attribute_group">
                                 @foreach($attribute_group as $attribute_group)
-                                <option value="{{$attribute_group->id}}">{{$attribute_group->label}}</option>
+                                    <option value="{{$attribute_group->id}}">{{$attribute_group->label}}</option>
                                 @endforeach
                         </select>
                     </div>
@@ -37,9 +37,37 @@
                 </form>
             </div>
 
-            <div class="col"></div>
+            <div class="col">
+                <button id="view_form" class="btn btn-primary"></button>
+            </div>
+        </div>
+
+        <div id="attribue_table" class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Label</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Date de création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($attribute as $attribute)
+                        <tr>
+                            <th scope="row">1</th>
+                            <td scope="col">{{$attribute->label}}</td>
+                            <td scope="col">{{$attribute->type}}</td>
+                            <td scope="col">{{$attribute->created_at}}</td>
+                        </tr>
+                    @endforeach
+    
+                </tbody>
+            </table>
         </div>
     </div>
+
+
 
 
 @endsection
