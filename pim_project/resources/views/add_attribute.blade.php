@@ -33,16 +33,15 @@
                                 @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
                 </form>
             </div>
 
             <div class="col">
-                <button id="view_form" class="btn btn-primary"></button>
+                
             </div>
         </div>
 
-        <div id="attribue_table" class="row">
+        <div id="attribute_table" class="row">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -64,6 +63,7 @@
     
                 </tbody>
             </table>
+            <button id="view_form" class="btn btn-primary">créer</button>
         </div>
     </div>
 
