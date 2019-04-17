@@ -24,7 +24,11 @@ Route::post('/add_attribute_group', 'AttributeGroupController@post_attribute_gro
 Route::get('/add_families', 'FamiliesController@get_family_form');
 Route::post('/add_families', 'FamiliesController@post_family_form');
 
+Route::get('/notes', 'NoteController@show');
+Route::post('/notes', 'NoteController@insert');
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/product', 'ProductsController@display_product_by_categories');

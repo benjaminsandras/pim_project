@@ -23,7 +23,7 @@
     <a href="/add_attribute_group" class="list-group-item list-group-item-action bg-light">ajouter groupe d'attribut</a>
     <a href="/add_attribute" class="list-group-item list-group-item-action bg-light">ajouter attribut</a>
     <a href="/add_families" class="list-group-item list-group-item-action bg-light">ajouter famille</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">#</a>
+    <a href="/notes" class="list-group-item list-group-item-action bg-light">Notes</a>
     <a href="/add_families" class="list-group-item list-group-item-action bg-light">#</a>
   </div>
 </div>
@@ -79,6 +79,7 @@
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
   
 
 </body>

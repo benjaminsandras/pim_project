@@ -9,8 +9,7 @@ use App\Http\Controllers\Controller;
 use App\attributes;
 use App\attribute_groups;
 use App\families;
-use App\attribute_group_families;
-use App\attribute_families;
+
 
 class FamiliesController extends Controller
 {

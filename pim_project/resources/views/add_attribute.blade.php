@@ -33,6 +33,7 @@
                                 @endforeach
                         </select>
                     </div>
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
                 </form>
             </div>
 
@@ -49,15 +50,21 @@
                         <th scope="col">Label</th>
                         <th scope="col">Type</th>
                         <th scope="col">Date de création</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($attribute as $attribute)
                         <tr>
-                            <th scope="row">1</th>
-                            <td scope="col">{{$attribute->label}}</td>
-                            <td scope="col">{{$attribute->type}}</td>
-                            <td scope="col">{{$attribute->created_at}}</td>
+                            <form action="/add_attribute" method="get">
+                                   {{ csrf_field() }}
+                                <th scope="row">{{$attribute->id}}</th>
+                                <td scope="col">{{$attribute->label}}</td>
+                                <td scope="col">{{$attribute->type}}</td>
+                                <td scope="col">{{$attribute->created_at}}</td>
+                                <td scope="col"><button name="delete" type="submit" class="btn btn-danger pull-right" id="{{$attribute->id}}" value="{{$attribute->id}}">Supprimer</button></td>
+                            </form>
+                            
                         </tr>
                     @endforeach
     
