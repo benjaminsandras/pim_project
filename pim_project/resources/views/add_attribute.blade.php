@@ -56,13 +56,16 @@
                 <tbody>
                     @foreach($attribute as $attribute)
                         <tr>
-                            <form action="/add_attribute" method="get">
+                            <form method="get">
                                    {{ csrf_field() }}
                                 <th scope="row">{{$attribute->id}}</th>
                                 <td scope="col">{{$attribute->label}}</td>
                                 <td scope="col">{{$attribute->type}}</td>
                                 <td scope="col">{{$attribute->created_at}}</td>
-                                <td scope="col"><button name="delete" type="submit" class="btn btn-danger pull-right" id="{{$attribute->id}}" value="{{$attribute->id}}">Supprimer</button></td>
+                                <td scope="col">
+                                    <button name="delete" type="submit" class="btn btn-danger pull-right" id="{{$attribute->id}}" value="{{$attribute->id}}">Supprimer</button>
+                                    <a name="edit" class="btn btn-success pull-right" href="{{ route('edit_attribute', [$attribute->id])}}" id="{{$attribute->id}}" value="{{$attribute->id}}">modifier</a>
+                                </td>
                             </form>
                             
                         </tr>

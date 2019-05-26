@@ -18,6 +18,9 @@
 Route::get('/add_attribute', 'AttributeController@get_attribute_form');
 Route::post('/add_attribute', 'AttributeController@post_attribute_form');
 
+Route::get('/{id}', 'AttributeController@edit_attribute')->name('edit_attribute');
+Route::post('/{id}', 'AttributeController@update_attribute');
+
 Route::get('/add_attribute_group', 'AttributeGroupController@get_attribute_group_form');
 Route::post('/add_attribute_group', 'AttributeGroupController@post_attribute_group_form');
 
@@ -31,4 +34,5 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/product', 'ProductsController@display_product_by_categories');
+Route::get('/add_product', 'ProductsController@display_product_by_categories');
+Route::post('/add_product', 'ProductsController@post_product_form');
