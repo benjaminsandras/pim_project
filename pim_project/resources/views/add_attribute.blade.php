@@ -7,7 +7,7 @@
 @section('contenu')
 
     <div class="container">
-        <div id="attribute_form" class="row">
+        <div id="attribute_form" class="row form">
             <div class="col">
                 <form class="forms" action="/add_attribute" method="post">
                     {{ csrf_field() }}
@@ -15,16 +15,16 @@
                         <label for="attribute_name">Nom</label>
                         <input name="label" type="name" class="form-control" id="attribute_name" placeholder="Nom">
                     </div>
-                    <div class="form-group">
+                <!--     <div class="form-group">
                         <label for="attribute_type">Type</label>
                         <select name="type" multiple class="form-control" id="attribute_type">
-                            <option>1</option>
-                            <option>2</option>
+                            <option>texte</option>
+                            <option>numérique</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="attribute_group">Groupe</label>
                             <select name="fk_attribute_group" class="form-control" id="attribute_group">
@@ -42,13 +42,13 @@
             </div>
         </div>
 
-        <div id="attribute_table" class="row">
+        <div id="attribute_table" class="row table">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Label</th>
-                        <th scope="col">Type</th>
+                        <th scope="col">Groupe</th>
                         <th scope="col">Date de création</th>
                         <th scope="col"></th>
                     </tr>
@@ -60,7 +60,10 @@
                                    {{ csrf_field() }}
                                 <th scope="row">{{$attribute->id}}</th>
                                 <td scope="col">{{$attribute->label}}</td>
-                                <td scope="col">{{$attribute->type}}</td>
+
+                                        <td scope="col">{{$attribute_group->label}}</td>
+                      
+
                                 <td scope="col">{{$attribute->created_at}}</td>
                                 <td scope="col">
                                     <button name="delete" type="submit" class="btn btn-danger pull-right" id="{{$attribute->id}}" value="{{$attribute->id}}">Supprimer</button>

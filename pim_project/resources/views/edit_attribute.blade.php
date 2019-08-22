@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Layout</title>
+    <title>editer un attribut</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -15,13 +15,13 @@
         <div class="container">
             <div id="edit_attribute_form" class="row">
                 <div class="col">
-                    <form class="forms" action="{{url('/', [$attribute->id])}}" method="post">
+                    <form class="forms" action="{{url('/edit_attribute', [$attribute->id])}}" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="attribute_name">Nom</label>
                             <input name="label" type="name" class="form-control" id="attribute_name" placeholder="{{$attribute->label}}">
                         </div>
-                        <div class="form-group">
+                 <!--        <div class="form-group">
                             <label for="attribute_type">Type</label>
                             <select name="type" multiple class="form-control" id="attribute_type">
                                 <option>1</option>
@@ -30,7 +30,7 @@
                                 <option>4</option>
                                 <option>5</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="attribute_group">Groupe</label>
                                 <select name="fk_attribute_group" class="form-control" id="attribute_group">

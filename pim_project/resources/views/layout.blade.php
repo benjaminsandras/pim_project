@@ -25,7 +25,7 @@
     <a href="/add_attribute" class="list-group-item list-group-item-action bg-light">ajouter attribut</a>
     <a href="/add_families" class="list-group-item list-group-item-action bg-light">ajouter famille</a>
     <a href="/notes" class="list-group-item list-group-item-action bg-light">Notes</a>
-    <a href="/add_families" class="list-group-item list-group-item-action bg-light">#</a>
+    <a href="/" class="list-group-item list-group-item-action bg-light">#</a>
   </div>
 </div>
 <!-- /#sidebar-wrapper -->

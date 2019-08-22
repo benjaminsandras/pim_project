@@ -16,6 +16,7 @@ class AttributeGroups extends Migration
         Schema::create('attribute_groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }

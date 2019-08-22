@@ -18,8 +18,8 @@
 Route::get('/add_attribute', 'AttributeController@get_attribute_form');
 Route::post('/add_attribute', 'AttributeController@post_attribute_form');
 
-Route::get('/{id}', 'AttributeController@edit_attribute')->name('edit_attribute');
-Route::post('/{id}', 'AttributeController@update_attribute');
+Route::get('/edit_attribute/{id}', 'AttributeController@edit_attribute')->name('edit_attribute');
+Route::post('/edit_attribute/{id}', 'AttributeController@update_attribute');
 
 Route::get('/add_attribute_group', 'AttributeGroupController@get_attribute_group_form');
 Route::post('/add_attribute_group', 'AttributeGroupController@post_attribute_group_form');

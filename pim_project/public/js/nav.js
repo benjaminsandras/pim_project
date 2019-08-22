@@ -3,11 +3,11 @@ $("#menu-toggle").click(function(e) {
     $("#wrapper").toggleClass("toggled");
 });
 
-$("#attribute_form").hide();
+$(".form").hide();
 
-$("#view_form").click(function(){
-    $("#attribute_form").show();
-    $("#attribute_table").hide();
+$("#view_form, #view_form_group").click(function(){
+    $(".form").show();
+    $(".table").hide();
 });
 
 

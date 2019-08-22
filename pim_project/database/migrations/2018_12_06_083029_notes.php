@@ -15,9 +15,9 @@ class Notes extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('note_interne_emetteur');
-            $table->string('note_interne_recepteur');
-            $table->text('note_interne_commentaire');
+            $table->string('note_emetteur');
+            $table->string('note_recepteur');
+            $table->text('note_commentaire');
             $table->timestamps();
         });
     }
